@@ -4,9 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
   <title>Air alarm map</title>
 </head>
-<body>
-  <h1>Air alarm web page</h1>
+<body class="map">
+  <div class="popup settings hidden">
+    <img src="img/close.svg" alt="close icon" class="close-button hover-opacity butn">
+    <div class="setting-item">
+      <label for="lang">Language:</label>
+      <select id="lang">
+        <option value="en">English</option>
+        <option value="ru">Russian</option>
+      </select>
+    </div>
+    <div class="setting-item">
+      <label for="theme">Theme:</label>
+      <select id="theme">
+        <option value="en">Ligth</option>
+        <option value="ru">Dark</option>
+      </select>
+    </div>
+    <div class="setting-item">
+      <label for="alarm-type">Alarm type:</label>
+      <select id="alarm-type">
+        <option value="point">Point</option>
+        <option value="wave">Wave</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="topside">
+    <h1 class="main-header mh-map">Air alarm map</h1>
+    <h1 class="main-header mh-stat">Air alarm statistic</h1>
+    <img src="img/settings.svg" alt="settings icon" class="settings-icon hover-opacity butn" title="settings" onclick="document.querySelector('.popup.settings').classList.remove('hidden')">
+  </div>
+
+
+  <img src="img/map.svg" alt="svg ukraine map" class="ua-main-map">
+
+  <div class="ua-statistic">
+    Statistic
+  </div>
+
+  <div class="bottomside">
+    <img src="img/map-icon.svg" alt="map icon" class="map-button hover-opacity active" title="map">
+    <img src="img/data_table-icon.svg" alt="statistic icon" class="stat-button hover-opacity" title="statistic">
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>

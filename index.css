@@ -1,0 +1,102 @@
+* {box-sizing: border-box}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+body.map .mh-stat,
+body.map .ua-statistic {display: none}
+
+body.stat .mh-map,
+body.stat .ua-main-map {display: none}
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.popup {
+  width: 100vw;
+  background-color: rgb(189, 189, 189);
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 20px;
+  z-index: 100;
+}
+
+.popup .close-button {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+
+.popup.settings .setting-item {margin-bottom: 10px}
+
+.topside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  padding-bottom: 10px;
+}
+
+.main-header {
+  margin: 0;
+  padding: 0;
+}
+
+.butn {width: 50px}
+
+.hover-opacity {
+  transition: .1s;
+  cursor: pointer;
+}
+.hover-opacity:hover {opacity: .5}
+
+.ua-main-map {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.ua-statistic {
+  background-color: red;
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.bottomside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.bottomside img {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid;
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, .2);
+}
+.bottomside img:first-child {margin-right: 10px}
+
+.bottomside img.active {background-color: #d5ebff;}
+
+@media (max-width: 320px) {
+  .main-header {font-size: 1em}
+  .butn {width: 25px}
+}
