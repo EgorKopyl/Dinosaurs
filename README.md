@@ -1,3 +1,3 @@
 # Dinosaurs
 
-Node js web application: https://air-alarm-map.herokuapp.com
+Node js web application: https://dinosaurs-app.herokuapp.com/
